@@ -59,8 +59,11 @@ WHERE Name = 'Mark Twain';
 -- Punto 3: Eliminar Información con DELETE
 
 -- Eliminar el libro 'Pride and Prejudice' de la base de datos.
-DELETE FROM Book 
-WHERE Title = 'Pride and Prejudice';
+DELETE FROM Book_Author
+WHERE Book_id = (
+SELECT Book_id FROM Book
+WHERE Title = 'Pride and Prejudice'
+);
 
 -- Eliminar los autores que no han escrito ningún libro.kc
 DELETE FROM Author 
