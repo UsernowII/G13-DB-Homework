@@ -1,4 +1,4 @@
-**Punto 1: Generar Reportes con JOINs**
+**Punto 1: Generar Reportes con JOINs** 
    - Reporte 1: Usar INNER JOIN para seleccionar los títulos de los libros junto con el nombre de su editorial.
 
       ![alt text](Reporte_1_Code.png)
