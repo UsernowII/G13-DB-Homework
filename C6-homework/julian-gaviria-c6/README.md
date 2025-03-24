@@ -25,10 +25,7 @@ Es una API en express que lista unos productos predefinidos en el archivo ´prod
 
 #### Organizacion de las carpetas
 
-Tenemos el archivo ´server.js´ es donde se encuentra los metodos y
-
-## FUTURA IMPLEMENTACION
-
-la carpeta ´routes´ contiene los metos POST; PUT;GET; DELETE
+Tenemos el archivo ´server.js´ es donde se encuentra los metodos y la carpeta ´routes´ contiene los metodoss POST; PUT;GET; DELETE
+separados para que se mas escalable el proyecto
 
 ## EL proyecto corre en el puerto 5000
