@@ -1,24 +1,30 @@
 const express = require("express");
 const router = express.Router();
-const { products } = require("../products.js"); // Importamos las películas
+const { products } = require("../products");
 
+// Añadir un nuevo producto
 router.post("/products", (req, res) => {
-    const { title, directorId, genre, releaseYear } = req.body;
-
-    if (!title || !directorId || !genre || !releaseYear) {
-        return res.status(400).json({ message: "All fields are required" });
+    if (
+        !req.body.name ||
+        !req.body.price ||
+        !req.body.category ||
+        !req.body.description
+    ) {
+        return res
+            .status(400)
+            .send("Debe ingresar todos los campos requeridos.");
     }
 
-    const movie = {
-        id: movies.length + 1,
-        title,
-        directorId,
-        genre,
-        releaseYear,
+    const product = {
+        id: products.length ? products[products.length - 1].id + 1 : 1,
+        name: req.body.name,
+        price: req.body.price,
+        category: req.body.category,
+        description: req.body.description,
     };
 
-    movies.push(movie);
-    res.status(201).json({ message: "Movie added!", movie });
+    products.push(product);
+    res.status(201).json({ message: "Producto añadido con éxito!", product });
 });
 
-module.exports = router; //
+module.exports = router;
