@@ -22,7 +22,7 @@ Punto 1: Generar Reportes con SELECT:
       FROM Book_Author book_author
       JOIN Book book ON book_author.Book_ID = book.Book_ID
       WHERE book.Genre = 'Fantasy'
-     );
+     ); 
      
    - Reporte 4: Seleccionar los títulos de los libros escritos por autores cuyo nombre contiene 'J.K.' utilizando una subconsulta.
 
